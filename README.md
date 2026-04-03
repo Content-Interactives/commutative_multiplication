@@ -1,41 +1,54 @@
 # Commutative Property of Multiplication
 
-The **Commutative Property of Multiplication** interactive shows that changing the order of factors does not change the product. Students can test examples to see how multiplication remains consistent regardless of the order of numbers.
+React + Vite demo that commutative multiplication can swap factor order without changing the product. State and visual grouping live in `CommutativeMultiplication.jsx`.
+
+**Live site:** [https://content-interactives.github.io/commutative_multiplication](https://content-interactives.github.io/commutative_multiplication)
+
+Curriculum alignment and placement: [Standards.md](Standards.md).
 
 ---
 
-## 🔗 Live Interactive
+## Stack
 
-Try it out here:  
-👉 [https://content-interactives.github.io/commutative_multiplication](https://content-interactives.github.io/commutative_multiplication)
-
----
-
-## 🌐 Where This Interactive Is Being Used
-
-This interactive is currently featured in the following locations:
-
-- <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/5d12571f-8e12-4441-98ab-c0bc94069a96" /> **CK-12 Intent Response**  
-  - 👉 PRODUCTION: PENDING  
-  - 👉 MASTER: PENDING  
-- 📘 **CK-12 Flexbooks**
-  - 👉 PENDING
+| Layer | Notes |
+|--------|--------|
+| Build | Vite 6, `@vitejs/plugin-react` |
+| UI | React 19 |
+| Styling | Tailwind 3 |
+| Icons | lucide-react |
+| Deploy | `gh-pages -d dist`; `predeploy` runs `vite build` |
 
 ---
 
-## 📚 Standards & Subjects
+## Layout
 
-This interactive aligns with the following topics and standards:
-
-- **📂 Subject Area**: Middle School Math (Grade 6)  
-- **🧮 Topic**: Properties of Operations (Commutative Property of Multiplication)  
-- **📏 Common Core**:  
-  - 6.EE.A.3 – Apply the properties of operations to generate equivalent expressions.  
-  - 6.NS.B.3 – Fluently add, subtract, multiply, and divide multi-digit decimals using the standard algorithm.
+```
+vite.config.js          # base: '/commutative_multiplication/'
+src/
+  main.jsx → App.jsx → components/CommutativeMultiplication.jsx
+  components/ui/
+```
 
 ---
 
-## 🛠️ Developer Notes
+## `vite.config.js`
 
-- Built with: React, HTML, CSS, JavaScript  
-- Deployed via GitHub Pages
+`base: '/commutative_multiplication/'` must match the GitHub Pages repository path.
+
+---
+
+## Scripts
+
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Vite dev server |
+| `npm run build` | Production build → `dist/` |
+| `npm run preview` | Preview production build |
+| `npm run lint` | ESLint |
+| `npm run deploy` | Build and push `dist/` to `gh-pages` |
+
+---
+
+## Embedding
+
+Check `CommutativeMultiplication.jsx` for grid/layout height when iframing.
